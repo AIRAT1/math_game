@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="de.java.mymathgame"
+          android:installLocation="preferExternal">
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/avatar_1"
+            android:label="@string/app_name">
+        <activity
+                android:name="de.java.MathGame.MainActivity"
+                android:label="@string/app_name"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="de.java.MathGame.GameActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="de.java.MathGame.FinishActivity"
+                  android:screenOrientation="portrait"/>
+    </application>
+
+    <uses-permission android:name="ANDROID.PERMISSION.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="ANDROID.PERMISSION.WAKE_LOCK"/>
+
+</manifest>
